@@ -91,105 +91,105 @@ const ContactPage: React.FC = () => {
         <PageWrapper>
             {/* Contact Hero */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-16 sm:mb-20 pt-4 sm:pt-6">
-                <div className="lg:col-span-3 border-t border-brand-500 pt-3">
-                    <p className="text-xs font-black text-brand-500 uppercase">Contact desk</p>
-                    <p className="text-sm text-slate-500 mt-2">Abu Dhabi, UAE</p>
+                <div className="lg:col-span-3 border-t-2 border-brand-500 pt-3">
+                    <p className="text-xs sm:text-sm font-black text-brand-500 uppercase tracking-wider">Contact desk</p>
+                    <p className="text-sm text-slate-500 mt-2 font-medium">Abu Dhabi, UAE</p>
                 </div>
                 <div className="lg:col-span-8">
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 border border-brand-500/30 bg-brand-600/10 text-brand-500 text-[10px] font-black uppercase mb-6">
-                    <ShieldCheck className="w-3.5 h-3.5" />
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 border border-brand-500/30 bg-brand-500/10 text-brand-500 text-xs font-black uppercase mb-6 tracking-wider rounded-md">
+                    <ShieldCheck className="w-4 h-4" />
                     Contact BLUERAY Desk
                 </div>
-                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
+                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 leading-tight mb-6">
                     Discuss Your <span className="text-brand-500 italic">Inspection Requirement.</span>
                 </h1>
-                <p className="text-slate-300 text-base sm:text-lg font-light leading-relaxed max-w-2xl">
-                    Submit your scope or reach out directly to <strong className="text-white font-bold">{COMPANY_CONFIG.legalName}</strong> for technical evaluations, project quotes, and field testing inquiries.
+                <p className="text-slate-600 text-base sm:text-lg font-light leading-relaxed max-w-2xl">
+                    Submit your scope or reach out directly to <strong className="text-slate-900 font-semibold">{COMPANY_CONFIG.legalName}</strong> for technical evaluations, project quotes, and field testing inquiries.
                 </p>
                 </div>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-24">
                 {/* Direct Contact Information Cards */}
-                <div className="lg:col-span-5 space-y-4">
-                    <div className="p-6 sm:p-7 bg-slate-900/80 border border-white/10 space-y-6">
-                        <h2 className="text-xs font-black text-brand-500 uppercase">Headquarters & Operating Office</h2>
+                <div className="lg:col-span-5 space-y-5">
+                    <div className="p-7 sm:p-8 bg-white border border-brand-500/15 rounded-3xl shadow-sm space-y-6">
+                        <h2 className="text-sm sm:text-base font-black text-brand-500 uppercase tracking-wider">Headquarters & Operating Office</h2>
                         
-                        <div className="space-y-5">
+                        <div className="space-y-6">
                             <div className="flex items-start gap-4">
-                                <div className="w-10 h-10 bg-slate-950 rounded-xl border border-white/10 flex items-center justify-center shrink-0 mt-1">
-                                    <MapPin className="text-brand-500 w-5 h-5" />
+                                <div className="w-12 h-12 bg-brand-500/10 rounded-2xl border border-brand-500/20 flex items-center justify-center shrink-0 mt-1">
+                                    <MapPin className="text-brand-500 w-6 h-6" />
                                 </div>
                                 <div className="space-y-1">
-                                    <p className="text-[10px] font-black uppercase text-slate-400">Headquarters Address (UAE)</p>
-                                    <p className="text-xs text-slate-200 font-medium leading-relaxed">
+                                    <p className="text-sm font-bold uppercase text-slate-700 tracking-wider">Headquarters Address (UAE)</p>
+                                    <p className="text-sm sm:text-base text-slate-900 font-medium leading-relaxed">
                                         {COMPANY_CONFIG.uaeAddress.fullFormatted}
                                     </p>
                                 </div>
                             </div>
 
-                            <div className="flex items-center gap-4 pt-4 border-t border-white/5">
-                                <div className="w-10 h-10 bg-slate-950 rounded-xl border border-white/10 flex items-center justify-center shrink-0">
-                                    <Globe className="text-brand-500 w-5 h-5" />
+                            <div className="flex items-center gap-4 pt-5 border-t border-brand-500/10">
+                                <div className="w-12 h-12 bg-brand-500/10 rounded-2xl border border-brand-500/20 flex items-center justify-center shrink-0">
+                                    <Globe className="text-brand-500 w-6 h-6" />
                                 </div>
                                 <div>
-                                    <p className="text-[10px] font-black uppercase text-slate-400">International Presence</p>
-                                    <p className="text-xs font-bold text-white">Abu Dhabi Headquarters • India Branch</p>
+                                    <p className="text-sm font-bold uppercase text-slate-700 tracking-wider">International Presence</p>
+                                    <p className="text-sm sm:text-base font-bold text-slate-900">Abu Dhabi Headquarters • India Branch</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div className="p-6 sm:p-7 bg-slate-900/80 border border-white/10 space-y-5">
-                        <h2 className="text-xs font-black text-brand-500 uppercase">Direct Communication Lines</h2>
+                    <div className="p-7 sm:p-8 bg-white border border-brand-500/15 rounded-3xl shadow-sm space-y-6">
+                        <h2 className="text-sm sm:text-base font-black text-brand-500 uppercase tracking-wider">Direct Communication Lines</h2>
                         
-                        <div className="space-y-4 text-xs">
+                        <div className="space-y-5 text-sm sm:text-base">
                             <div className="flex items-center gap-4">
-                                <div className="w-10 h-10 bg-slate-950 rounded-xl border border-white/10 flex items-center justify-center shrink-0">
-                                    <Phone className="text-brand-500 w-5 h-5" />
+                                <div className="w-12 h-12 bg-brand-500/10 rounded-2xl border border-brand-500/20 flex items-center justify-center shrink-0">
+                                    <Phone className="text-brand-500 w-6 h-6" />
                                 </div>
                                 <div>
-                                    <p className="text-[10px] font-black uppercase text-slate-400">UAE Direct Phone</p>
-                                    <a href={COMPANY_CONFIG.phones.uae.href} className="text-sm font-bold text-white hover:text-brand-500 transition-colors">
+                                    <p className="text-sm font-bold uppercase text-slate-700 tracking-wider">UAE Direct Phone</p>
+                                    <a href={COMPANY_CONFIG.phones.uae.href} className="text-base sm:text-lg font-bold text-slate-900 hover:text-brand-500 transition-colors">
                                         {COMPANY_CONFIG.phones.uae.display}
                                     </a>
                                 </div>
                             </div>
 
-                            <div className="flex items-center gap-4 pt-3 border-t border-white/5">
-                                <div className="w-10 h-10 bg-slate-950 rounded-xl border border-white/10 flex items-center justify-center shrink-0">
-                                    <Phone className="text-brand-500 w-5 h-5" />
+                            <div className="flex items-center gap-4 pt-4 border-t border-brand-500/10">
+                                <div className="w-12 h-12 bg-brand-500/10 rounded-2xl border border-brand-500/20 flex items-center justify-center shrink-0">
+                                    <Phone className="text-brand-500 w-6 h-6" />
                                 </div>
                                 <div>
-                                    <p className="text-[10px] font-black uppercase text-slate-400">India Branch Phone</p>
-                                    <a href={COMPANY_CONFIG.phones.india.href} className="text-sm font-bold text-white hover:text-brand-500 transition-colors">
+                                    <p className="text-sm font-bold uppercase text-slate-700 tracking-wider">India Branch Phone</p>
+                                    <a href={COMPANY_CONFIG.phones.india.href} className="text-base sm:text-lg font-bold text-slate-900 hover:text-brand-500 transition-colors">
                                         {COMPANY_CONFIG.phones.india.display}
                                     </a>
                                 </div>
                             </div>
 
-                            <div className="flex items-center gap-4 pt-3 border-t border-white/5">
-                                <div className="w-10 h-10 bg-slate-950 rounded-xl border border-white/10 flex items-center justify-center shrink-0">
-                                    <Mail className="text-brand-500 w-5 h-5" />
+                            <div className="flex items-center gap-4 pt-4 border-t border-brand-500/10">
+                                <div className="w-12 h-12 bg-brand-500/10 rounded-2xl border border-brand-500/20 flex items-center justify-center shrink-0">
+                                    <Mail className="text-brand-500 w-6 h-6" />
                                 </div>
-                                <div className="space-y-0.5">
-                                    <p className="text-[10px] font-black uppercase text-slate-400">Official Emails</p>
-                                    <a href={`mailto:${COMPANY_CONFIG.emails.admin}`} className="text-xs font-medium text-slate-200 block hover:text-brand-500 transition-colors break-all">
+                                <div className="space-y-1">
+                                    <p className="text-sm font-bold uppercase text-slate-700 tracking-wider">Official Emails</p>
+                                    <a href={`mailto:${COMPANY_CONFIG.emails.admin}`} className="text-sm sm:text-base font-semibold text-slate-900 block hover:text-brand-500 transition-colors break-all">
                                         {COMPANY_CONFIG.emails.admin}
                                     </a>
-                                    <a href={`mailto:${COMPANY_CONFIG.emails.international}`} className="text-xs font-medium text-slate-400 block hover:text-brand-500 transition-colors break-all">
+                                    <a href={`mailto:${COMPANY_CONFIG.emails.international}`} className="text-sm sm:text-base font-medium text-slate-600 block hover:text-brand-500 transition-colors break-all">
                                         {COMPANY_CONFIG.emails.international}
                                     </a>
                                 </div>
                             </div>
 
-                            <div className="flex items-center gap-4 pt-3 border-t border-white/5">
-                                <div className="w-10 h-10 bg-slate-950 rounded-xl border border-white/10 flex items-center justify-center shrink-0">
-                                    <Globe className="text-brand-500 w-5 h-5" />
+                            <div className="flex items-center gap-4 pt-4 border-t border-brand-500/10">
+                                <div className="w-12 h-12 bg-brand-500/10 rounded-2xl border border-brand-500/20 flex items-center justify-center shrink-0">
+                                    <Globe className="text-brand-500 w-6 h-6" />
                                 </div>
                                 <div>
-                                    <p className="text-[10px] font-black uppercase text-slate-400">Official Web Domain</p>
-                                    <a href={COMPANY_CONFIG.website.href} target="_blank" rel="noopener noreferrer" className="text-xs font-bold text-white hover:text-brand-500 transition-colors">
+                                    <p className="text-sm font-bold uppercase text-slate-700 tracking-wider">Official Web Domain</p>
+                                    <a href={COMPANY_CONFIG.website.href} target="_blank" rel="noopener noreferrer" className="text-sm sm:text-base font-bold text-slate-900 hover:text-brand-500 transition-colors">
                                         {COMPANY_CONFIG.website.display}
                                     </a>
                                 </div>
@@ -199,16 +199,16 @@ const ContactPage: React.FC = () => {
                 </div>
 
                 {/* Inspection Enquiry Form */}
-                <div className="contact-enquiry-panel lg:col-span-7 bg-slate-900/90 p-6 sm:p-9 border border-white/10 shadow-2xl">
+                <div className="contact-enquiry-panel lg:col-span-7 bg-white p-7 sm:p-10 border border-brand-500/15 rounded-3xl shadow-sm">
                     <div className="mb-8">
-                        <h2 className="on-dark-heading text-xl sm:text-2xl font-bold uppercase mb-2">Inspection Enquiry Form</h2>
-                        <p className="on-dark-body text-xs font-light">Fill out your project details below to launch a direct email enquiry to our technical team.</p>
+                        <h2 className="text-slate-900 text-2xl sm:text-3xl font-bold uppercase mb-2">Inspection Enquiry Form</h2>
+                        <p className="text-slate-700 text-sm sm:text-base font-normal">Fill out your project details below to launch a direct email enquiry to our technical team.</p>
                     </div>
 
                     <form className="space-y-6" onSubmit={handleSubmit} noValidate>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div className="space-y-2">
-                                <label htmlFor="fullName" className="on-dark-label text-[10px] font-black uppercase">Full Name *</label>
+                                <label htmlFor="fullName" className="text-sm font-bold uppercase text-slate-800 tracking-wider">Full Name *</label>
                                 <input
                                     type="text"
                                     id="fullName"
@@ -216,13 +216,13 @@ const ContactPage: React.FC = () => {
                                     value={formData.fullName}
                                     onChange={handleChange}
                                     placeholder="Your Name"
-                                    className={`w-full bg-slate-950 border ${errors.fullName ? 'border-red-500' : 'border-white/10'} rounded-xl px-4 py-3 text-white text-xs focus:border-brand-500 focus:outline-none transition-all placeholder:text-slate-600 font-medium`}
+                                    className={`w-full bg-slate-50 border ${errors.fullName ? 'border-red-500' : 'border-brand-500/20'} rounded-xl px-4 py-3.5 text-slate-900 text-sm sm:text-base focus:border-brand-500 focus:bg-white focus:outline-none transition-all placeholder:text-slate-500 font-medium`}
                                 />
-                                {errors.fullName && <p className="text-[10px] text-red-400 font-medium">{errors.fullName}</p>}
+                                {errors.fullName && <p className="text-xs text-red-500 font-medium">{errors.fullName}</p>}
                             </div>
 
                             <div className="space-y-2">
-                                <label htmlFor="companyName" className="on-dark-label text-[10px] font-black uppercase">Company Name</label>
+                                <label htmlFor="companyName" className="text-sm font-bold uppercase text-slate-800 tracking-wider">Company Name</label>
                                 <input
                                     type="text"
                                     id="companyName"
@@ -230,14 +230,14 @@ const ContactPage: React.FC = () => {
                                     value={formData.companyName}
                                     onChange={handleChange}
                                     placeholder="Company / Organization"
-                                    className="w-full bg-slate-950 border border-white/10 rounded-xl px-4 py-3 text-white text-xs focus:border-brand-500 focus:outline-none transition-all placeholder:text-slate-600 font-medium"
+                                    className="w-full bg-slate-50 border border-brand-500/20 rounded-xl px-4 py-3.5 text-slate-900 text-sm sm:text-base focus:border-brand-500 focus:bg-white focus:outline-none transition-all placeholder:text-slate-500 font-medium"
                                 />
                             </div>
                         </div>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div className="space-y-2">
-                                <label htmlFor="email" className="on-dark-label text-[10px] font-black uppercase">Corporate Email *</label>
+                                <label htmlFor="email" className="text-sm font-bold uppercase text-slate-800 tracking-wider">Corporate Email *</label>
                                 <input
                                     type="email"
                                     id="email"
@@ -245,13 +245,13 @@ const ContactPage: React.FC = () => {
                                     value={formData.email}
                                     onChange={handleChange}
                                     placeholder="email@company.com"
-                                    className={`w-full bg-slate-950 border ${errors.email ? 'border-red-500' : 'border-white/10'} rounded-xl px-4 py-3 text-white text-xs focus:border-brand-500 focus:outline-none transition-all placeholder:text-slate-600 font-medium`}
+                                    className={`w-full bg-slate-50 border ${errors.email ? 'border-red-500' : 'border-brand-500/20'} rounded-xl px-4 py-3.5 text-slate-900 text-sm sm:text-base focus:border-brand-500 focus:bg-white focus:outline-none transition-all placeholder:text-slate-500 font-medium`}
                                 />
-                                {errors.email && <p className="text-[10px] text-red-400 font-medium">{errors.email}</p>}
+                                {errors.email && <p className="text-xs text-red-500 font-medium">{errors.email}</p>}
                             </div>
 
                             <div className="space-y-2">
-                                <label htmlFor="phone" className="on-dark-label text-[10px] font-black uppercase">Phone Number *</label>
+                                <label htmlFor="phone" className="text-sm font-bold uppercase text-slate-800 tracking-wider">Phone Number *</label>
                                 <input
                                     type="tel"
                                     id="phone"
@@ -259,20 +259,20 @@ const ContactPage: React.FC = () => {
                                     value={formData.phone}
                                     onChange={handleChange}
                                     placeholder="+971 -- --- ----"
-                                    className={`w-full bg-slate-950 border ${errors.phone ? 'border-red-500' : 'border-white/10'} rounded-xl px-4 py-3 text-white text-xs focus:border-brand-500 focus:outline-none transition-all placeholder:text-slate-600 font-medium`}
+                                    className={`w-full bg-slate-50 border ${errors.phone ? 'border-red-500' : 'border-brand-500/20'} rounded-xl px-4 py-3.5 text-slate-900 text-sm sm:text-base focus:border-brand-500 focus:bg-white focus:outline-none transition-all placeholder:text-slate-500 font-medium`}
                                 />
-                                {errors.phone && <p className="text-[10px] text-red-400 font-medium">{errors.phone}</p>}
+                                {errors.phone && <p className="text-xs text-red-500 font-medium">{errors.phone}</p>}
                             </div>
                         </div>
 
                         <div className="space-y-2">
-                            <label htmlFor="service" className="on-dark-label text-[10px] font-black uppercase">Service Required *</label>
+                            <label htmlFor="service" className="text-sm font-bold uppercase text-slate-800 tracking-wider">Service Required *</label>
                             <select
                                 name="service"
                                 id="service"
                                 value={formData.service}
                                 onChange={handleChange}
-                                className={`w-full bg-slate-950 border ${errors.service ? 'border-red-500' : 'border-white/10'} rounded-xl px-4 py-3 text-white text-xs focus:border-brand-500 focus:outline-none transition-all font-medium`}
+                                className={`w-full bg-slate-50 border ${errors.service ? 'border-red-500' : 'border-brand-500/20'} rounded-xl px-4 py-3.5 text-slate-900 text-sm sm:text-base focus:border-brand-500 focus:bg-white focus:outline-none transition-all font-medium`}
                             >
                                 <option value="NDT & Inspection Services">NDT & Inspection Services (VT, PT, MT, UT, ET)</option>
                                 <option value="Advanced NDT — PAUT / TOFD">Advanced NDT — PAUT / TOFD</option>
@@ -280,11 +280,11 @@ const ContactPage: React.FC = () => {
                                 <option value="Pull-Out Testing">Tensile Pull-Out Testing (Rebar, Anchors, Tiles)</option>
                                 <option value="Other Inspection Requirement">Other Inspection Requirement</option>
                             </select>
-                            {errors.service && <p className="text-[10px] text-red-400 font-medium">{errors.service}</p>}
+                            {errors.service && <p className="text-xs text-red-500 font-medium">{errors.service}</p>}
                         </div>
 
                         <div className="space-y-2">
-                            <label htmlFor="message" className="on-dark-label text-[10px] font-black uppercase">Project / Scope Details *</label>
+                            <label htmlFor="message" className="text-sm font-bold uppercase text-slate-800 tracking-wider">Project / Scope Details *</label>
                             <textarea
                                 rows={4}
                                 id="message"
@@ -292,20 +292,20 @@ const ContactPage: React.FC = () => {
                                 value={formData.message}
                                 onChange={handleChange}
                                 placeholder="Describe asset type, inspection method, site location, or project timeline..."
-                                className={`w-full bg-slate-950 border ${errors.message ? 'border-red-500' : 'border-white/10'} rounded-xl px-4 py-3 text-white text-xs focus:border-brand-500 focus:outline-none transition-all resize-none placeholder:text-slate-600 font-medium`}
+                                className={`w-full bg-slate-50 border ${errors.message ? 'border-red-500' : 'border-brand-500/20'} rounded-xl px-4 py-3.5 text-slate-900 text-sm sm:text-base focus:border-brand-500 focus:bg-white focus:outline-none transition-all resize-none placeholder:text-slate-500 font-medium`}
                             ></textarea>
-                            {errors.message && <p className="text-[10px] text-red-400 font-medium">{errors.message}</p>}
+                            {errors.message && <p className="text-xs text-red-500 font-medium">{errors.message}</p>}
                         </div>
 
                         <div className="pt-2">
                             <button
                                 type="submit"
-                                className="w-full py-4 bg-brand-600 text-white font-black uppercase text-xs rounded-md shadow-lg shadow-brand-950/40 hover:bg-brand-700 transition-colors flex items-center justify-center gap-2"
+                                className="w-full py-4 bg-brand-600 text-white font-black uppercase text-sm sm:text-base rounded-xl shadow-lg shadow-brand-600/20 hover:bg-brand-700 transition-all flex items-center justify-center gap-2"
                             >
-                                <Send className="w-4 h-4" />
+                                <Send className="w-5 h-5" />
                                 Prepare Email Enquiry
                             </button>
-                            <p className="on-dark-muted text-[10px] text-center mt-3 font-light">
+                            <p className="text-xs sm:text-sm text-slate-600 text-center mt-3 font-normal">
                                 Opens your default email application with pre-populated enquiry details addressed to {COMPANY_CONFIG.emails.admin}
                             </p>
                         </div>

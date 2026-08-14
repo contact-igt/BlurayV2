@@ -34,51 +34,51 @@ const WhyChooseBLUERAY: React.FC = () => {
     ];
 
     return (
-        <section className="py-20 sm:py-28 bg-slate-950">
+        <section className="py-20 sm:py-28 bg-slate-50/50 border-t border-brand-500/10">
             <div className="max-w-7xl mx-auto px-5 sm:px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-6 items-start">
                     <div className="lg:col-span-4 lg:sticky lg:top-28">
-                        <h2 className="text-xs font-black text-brand-500 uppercase mb-4">The BLUERAY Advantage</h2>
-                        <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8 leading-tight">Why Partner With BLUERAY?</h3>
+                        <h2 className="text-xs font-black text-brand-500 uppercase mb-4 tracking-wider">The BLUERAY Advantage</h2>
+                        <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-8 leading-tight">Why Partner With BLUERAY?</h3>
                     </div>
 
-                    <div className="lg:col-span-5 border-t border-white/10">
+                    <div className="lg:col-span-5 border-t border-brand-500/15">
                         {valueProps.map((item, i) => (
-                            <div key={item.title} className="group grid grid-cols-[2.5rem_1fr] gap-4 py-6 border-b border-white/10 hover:border-brand-500/50 transition-colors duration-150">
-                                <span className="text-sm font-black text-brand-500">0{i + 1}</span>
+                            <div key={item.title} className="group grid grid-cols-[2.5rem_1fr] gap-4 py-6 border-b border-brand-500/15 hover:border-brand-500 transition-colors duration-150">
+                                <span className="text-base font-black text-brand-500">0{i + 1}</span>
                                 <div>
-                                    <h4 className="text-white font-bold text-lg mb-2 flex items-center gap-2">
-                                        <CheckCircle2 className="w-4 h-4 text-brand-500 shrink-0" />
+                                    <h4 className="text-slate-900 font-bold text-lg sm:text-xl mb-2 flex items-center gap-2 group-hover:text-brand-500 transition-colors">
+                                        <CheckCircle2 className="w-5 h-5 text-brand-500 shrink-0" />
                                         {item.title}
                                     </h4>
-                                    <p className="text-sm text-slate-400 leading-relaxed">{item.desc}</p>
+                                    <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-light">{item.desc}</p>
                                 </div>
                             </div>
                         ))}
                     </div>
 
-                    <div className="lg:col-span-3 relative border-l border-white/10 pl-0 lg:pl-6 space-y-8">
-                        <div>
-                            <span className="text-[10px] font-black uppercase text-brand-500 block mb-2">Success Mantra</span>
-                            <h4 className="text-xl font-bold text-white mb-4 uppercase">Meticulous Execution & Quality</h4>
-                            <p className="text-slate-300 font-light italic text-base leading-relaxed">
+                    <div className="lg:col-span-3 relative border-l border-brand-500/15 pl-0 lg:pl-6 space-y-6">
+                        <div className="bg-white p-6 rounded-2xl border border-brand-500/15 shadow-sm">
+                            <span className="text-xs font-black uppercase text-brand-500 block mb-2 tracking-wider">Success Mantra</span>
+                            <h4 className="text-xl sm:text-2xl font-bold text-slate-900 mb-4 uppercase">Meticulous Execution & Quality</h4>
+                            <p className="text-slate-600 font-light italic text-base sm:text-lg leading-relaxed">
                                 "The importance of meticulous execution and a commitment to quality are essential for long-term project success. We emphasize both technical excellence and ethical practices to establish enduring trust and client satisfaction."
                             </p>
                         </div>
 
-                        <div className="pt-6 border-t border-white/10">
-                            <span className="text-[10px] font-black uppercase text-slate-400 block mb-4">Core Operating Principles</span>
+                        <div className="pt-4 border-t border-brand-500/15">
+                            <span className="text-xs font-black uppercase text-slate-500 block mb-4 tracking-wider">Core Operating Principles</span>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                 {principles.map((p, idx) => (
-                                    <div key={idx} className="flex items-center gap-2.5 p-3 bg-slate-950/60 border border-white/10">
+                                    <div key={idx} className="flex items-center gap-2.5 p-3 bg-white border border-brand-500/15 rounded-lg shadow-sm">
                                         <p.icon className="w-4 h-4 text-brand-500 shrink-0" />
-                                        <span className="text-[11px] font-semibold text-slate-200">{p.label}</span>
+                                        <span className="text-xs sm:text-sm font-semibold text-slate-800">{p.label}</span>
                                     </div>
                                 ))}
                             </div>
                         </div>
 
-                        <div className="pt-4 flex justify-between items-center text-[10px] font-black uppercase text-brand-500">
+                        <div className="pt-2 flex justify-between items-center text-xs font-bold uppercase text-brand-500">
                             <span>{COMPANY_CONFIG.headquarters}</span>
                             <span>India Branch Presence</span>
                         </div>

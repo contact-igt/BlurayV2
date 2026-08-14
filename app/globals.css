@@ -9,46 +9,42 @@
   --brand-blue-deep-rgb: 4 44 125;
   --brand-blue-light: #4662aa;
   --brand-blue-light-rgb: 70 98 170;
-  --brand-blue-on-dark: #94a4ce;
+  --brand-blue-on-dark: #023fae;
   --brand-charcoal: #222627;
   /* Logo palette reference only. Active UI styling must not use orange. */
   --brand-orange: #f97908;
   --brand-primary: var(--brand-blue);
-  --background: #030812;
-  --foreground: #e2e8f0;
-  --surface: #0c1628;
-  --surface-deep: #030812;
-  --surface-muted: #13213a;
-  --text-strong: #f8fafc;
-  --text-body: #cbd5e1;
-  --text-muted: #94a3b8;
-  --on-dark-heading: #f8fafc;
-  --on-dark-body: #cbd5e1;
-  --on-dark-muted: #94a3b8;
-  --on-dark-label: #cbd5e1;
-  --line: rgba(70, 98, 170, 0.25);
-  --accent: var(--brand-primary);
-}
-
-html[data-theme='light'] {
-  --background: #f4f7fb;
+  --background: #ffffff;
   --foreground: var(--brand-charcoal);
   --surface: #ffffff;
-  --surface-deep: #f8fafc;
+  --surface-deep: #ffffff;
   --surface-muted: #edf3fa;
   --text-strong: var(--brand-charcoal);
   --text-body: #334155;
   --text-muted: #64748b;
-  --on-dark-heading: #f8fafc;
-  --on-dark-body: #cbd5e1;
-  --on-dark-muted: #94a3b8;
-  --on-dark-label: #cbd5e1;
-  --line: rgba(4, 44, 125, 0.16);
+  --on-dark-heading: var(--brand-charcoal);
+  --on-dark-body: #334155;
+  --on-dark-muted: #64748b;
+  --on-dark-label: #334155;
+  --line: rgba(4, 44, 125, 0.14);
+  --accent: var(--brand-primary);
+}
+
+html {
+  --background: #ffffff;
+  --foreground: var(--brand-charcoal);
+  --surface: #ffffff;
+  --surface-deep: #ffffff;
+  --surface-muted: #edf3fa;
+  --text-strong: var(--brand-charcoal);
+  --text-body: #334155;
+  --text-muted: #64748b;
+  --line: rgba(4, 44, 125, 0.14);
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: #ffffff;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -57,83 +53,41 @@ body {
 }
 
 .theme-toggle {
-  left: max(1rem, env(safe-area-inset-left));
-  bottom: max(1rem, calc(1rem + env(safe-area-inset-bottom)));
-  border-color: rgba(70, 98, 170, 0.46);
-  background: #081326;
-  color: #f8fafc;
-  border-radius: 0.375rem;
-  box-shadow: 0 12px 28px rgba(2, 6, 23, 0.24);
+  display: none !important;
 }
 
-@media (min-width: 640px) {
-  .theme-toggle {
-    left: 1.5rem;
-    bottom: 1.5rem;
-  }
+/* Ensure legacy dark utility classes render cleanly on light theme surfaces */
+.bg-slate-950,
+[class~='bg-slate-950/95'],
+[class~='bg-slate-950/80'],
+[class~='bg-slate-950/70'],
+[class~='bg-slate-950/60'],
+[class~='bg-slate-950/55'],
+[class~='bg-slate-950/50'],
+[class~='bg-slate-950/30'] {
+  background-color: #ffffff !important;
 }
 
-.theme-toggle:hover {
-  border-color: var(--brand-blue-light);
-  color: var(--brand-blue-light);
+.bg-slate-900,
+[class~='bg-slate-900/95'],
+[class~='bg-slate-900/80'],
+[class~='bg-slate-900/60'],
+[class~='bg-slate-900/50'],
+[class~='bg-slate-900/40'],
+[class~='bg-slate-900/20'] {
+  background-color: #f8fafc !important;
 }
 
-html[data-theme='light'] .theme-toggle {
-  border-color: rgba(51, 65, 85, 0.24);
-  background: #ffffff;
-  color: #0f172a;
-  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.14);
+[class~='bg-white/5'],
+[class~='bg-white/10'] {
+  background-color: #edf3fa !important;
 }
 
-/* The application predates theme tokens. These mappings keep existing utility-led
-   components on shared semantic surfaces while avoiding per-page theme branches. */
-html[data-theme='light'] .bg-slate-950,
-html[data-theme='light'] [class~='bg-slate-950/95'],
-html[data-theme='light'] [class~='bg-slate-950/80'],
-html[data-theme='light'] [class~='bg-slate-950/70'],
-html[data-theme='light'] [class~='bg-slate-950/60'],
-html[data-theme='light'] [class~='bg-slate-950/55'],
-html[data-theme='light'] [class~='bg-slate-950/50'],
-html[data-theme='light'] [class~='bg-slate-950/30'] {
-  background-color: var(--surface-deep) !important;
-}
-
-html[data-theme='light'] .bg-slate-900,
-html[data-theme='light'] [class~='bg-slate-900/95'],
-html[data-theme='light'] [class~='bg-slate-900/80'],
-html[data-theme='light'] [class~='bg-slate-900/60'],
-html[data-theme='light'] [class~='bg-slate-900/50'],
-html[data-theme='light'] [class~='bg-slate-900/40'],
-html[data-theme='light'] [class~='bg-slate-900/20'] {
-  background-color: var(--surface) !important;
-}
-
-html[data-theme='light'] [class~='bg-white/5'],
-html[data-theme='light'] [class~='bg-white/10'] {
-  background-color: var(--surface-muted) !important;
-}
-
-html[data-theme='light'] .text-white,
-html[data-theme='light'] .text-slate-100 {
-  color: var(--text-strong) !important;
-}
-
-html[data-theme='light'] .text-slate-200,
-html[data-theme='light'] .text-slate-300 {
-  color: var(--text-body) !important;
-}
-
-html[data-theme='light'] .text-slate-400,
-html[data-theme='light'] .text-slate-500,
-html[data-theme='light'] .text-slate-600 {
-  color: var(--text-muted) !important;
-}
-
-html[data-theme='light'] [class~='border-white/5'],
-html[data-theme='light'] [class~='border-white/10'],
-html[data-theme='light'] [class~='border-white/15'],
-html[data-theme='light'] [class~='divide-white/10'] {
-  border-color: var(--line) !important;
+[class~='border-white/5'],
+[class~='border-white/10'],
+[class~='border-white/15'],
+[class~='divide-white/10'] {
+  border-color: rgba(4, 44, 125, 0.14) !important;
 }
 
 .site-navbar,
@@ -180,13 +134,15 @@ html[data-theme='light'] [class~='divide-white/10'] {
 }
 
 .site-footer {
-  background-color: #030812 !important;
+  background-color: #f8fafc !important;
+  color: #222627 !important;
+  border-top: 1px solid rgba(4, 44, 125, 0.14) !important;
 }
 
 .footer-brand-area {
   background: #ffffff;
   border-left: 4px solid var(--brand-blue);
-  box-shadow: inset 0 0 0 1px rgba(4, 44, 125, 0.1);
+  box-shadow: 0 4px 20px rgba(4, 44, 125, 0.06);
 }
 
 .footer-brand-copy {
@@ -194,66 +150,29 @@ html[data-theme='light'] [class~='divide-white/10'] {
 }
 
 .footer-website-link {
-  color: var(--brand-blue-on-dark) !important;
+  color: var(--brand-blue) !important;
 }
 
-html[data-theme='light'] .site-footer .footer-heading,
-html[data-theme='light'] .site-footer .footer-strong {
-  color: #f8fafc !important;
+.site-footer .footer-heading,
+.site-footer .footer-strong {
+  color: #0f172a !important;
 }
 
-html[data-theme='light'] .site-footer .footer-body {
-  color: #cbd5e1 !important;
+.site-footer .footer-body {
+  color: #334155 !important;
 }
 
-html[data-theme='light'] .site-footer .footer-muted {
-  color: #94a3b8 !important;
+.site-footer .footer-muted {
+  color: #64748b !important;
 }
 
-html[data-theme='light'] .hover\:text-white:hover,
-html[data-theme='light'] .group:hover .group-hover\:text-white {
-  color: var(--text-strong) !important;
+.theme-hero-backdrop {
+  background: linear-gradient(180deg, #ffffff 0%, #f4f7fb 52%, #ffffff 100%);
 }
 
-html[data-theme='light'] [class~='bg-brand-600'].text-white,
-html[data-theme='light'] [class~='bg-brand-600'] .text-white,
-html[data-theme='light'] [class~='bg-brand-700'].text-white,
-html[data-theme='light'] [class~='bg-brand-700'] .text-white {
-  color: #ffffff !important;
-}
-
-html[data-theme='light'] figure .text-white,
-html[data-theme='light'] figure .text-slate-300 {
-  color: #ffffff !important;
-}
-
-.on-dark-heading {
-  color: var(--on-dark-heading) !important;
-}
-
-.on-dark-body {
-  color: var(--on-dark-body) !important;
-}
-
-.on-dark-muted {
-  color: var(--on-dark-muted) !important;
-}
-
-.on-dark-label {
-  color: var(--on-dark-label) !important;
-}
-
-.theme-hero-backdrop,
 .theme-image-overlay {
-  background: linear-gradient(90deg, rgba(3, 8, 18, 0.82) 0%, rgba(4, 44, 125, 0.2) 55%, rgba(3, 8, 18, 0.32) 100%);
-}
-
-html[data-theme='light'] .theme-hero-backdrop {
-  background: linear-gradient(180deg, #f8fafc 0%, #edf3fa 52%, #f8fafc 100%);
-}
-
-html[data-theme='light'] .theme-image-overlay {
-  background: linear-gradient(90deg, rgba(3, 8, 18, 0.78) 0%, rgba(4, 44, 125, 0.28) 55%, rgba(3, 8, 18, 0.14) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.25) 100%);
+  pointer-events: none;
 }
 
 * {

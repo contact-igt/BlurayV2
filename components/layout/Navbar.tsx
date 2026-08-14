@@ -43,8 +43,8 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
 
     return (
         <nav className={`site-navbar fixed w-full z-[100] transition-all duration-300 ${isScrolled
-            ? 'py-2 bg-slate-950/95 border-b border-white/10 shadow-2xl'
-            : 'py-2.5 sm:py-3 bg-slate-950/70'
+            ? 'py-2 bg-white/95 border-b border-brand-500/15 shadow-md backdrop-blur-md'
+            : 'py-2.5 sm:py-3 bg-white/90 border-b border-brand-500/10 backdrop-blur-sm'
             }`}>
             <div className="max-w-7xl mx-auto px-5 sm:px-6 flex justify-between items-center">
                 <button aria-label="BLUERAY home" className="flex items-center cursor-pointer group" onClick={() => setCurrentPage('home')}>
@@ -57,7 +57,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
                         <button
                             key={link.id}
                             onClick={() => setCurrentPage(link.id)}
-                            className={`site-nav-link text-[11px] font-bold uppercase transition-colors ${currentPage === link.id ? 'site-nav-link-active' : ''}`}
+                            className={`site-nav-link text-xs lg:text-[13px] font-bold uppercase transition-colors ${currentPage === link.id ? 'site-nav-link-active' : ''}`}
                         >
                             {link.label}
                         </button>
@@ -67,9 +67,9 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
                     <div className="relative">
                         <button
                             onClick={() => setServicesOpen((open) => !open)}
-                            className={`site-nav-link flex items-center gap-1 text-[11px] font-bold uppercase transition-colors ${['ndt', 'advanced-ndt', 'welder-qual', 'pull-out', 'mechanical', 'qaqc', 'coating', 'manpower'].includes(currentPage) ? 'site-nav-link-active' : ''}`}
+                            className={`site-nav-link flex items-center gap-1 text-xs lg:text-[13px] font-bold uppercase transition-colors ${['ndt', 'advanced-ndt', 'welder-qual', 'pull-out', 'mechanical', 'qaqc', 'coating', 'manpower'].includes(currentPage) ? 'site-nav-link-active' : ''}`}
                         >
-                            Services <ChevronDown className={`w-3 h-3 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+                            Services <ChevronDown className={`w-3.5 h-3.5 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
                         </button>
 
                         <AnimatePresence>
@@ -85,10 +85,10 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
                                             <button
                                                 key={item.id}
                                                 onClick={() => { setCurrentPage(item.id); setServicesOpen(false); }}
-                                                className="site-dropdown-item w-full flex items-center gap-3 p-4 text-left transition-colors"
+                                                className="site-dropdown-item w-full flex items-center gap-3 p-3.5 text-left transition-colors"
                                             >
                                                 <item.icon className="w-5 h-5 text-brand-500" />
-                                                <span className="text-xs font-bold uppercase">{item.label}</span>
+                                                <span className="text-xs sm:text-sm font-bold uppercase">{item.label}</span>
                                             </button>
                                         ))}
                                     </div>
@@ -101,7 +101,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
                         <button
                             key={link.id}
                             onClick={() => setCurrentPage(link.id)}
-                            className={`site-nav-link text-[11px] font-bold uppercase transition-colors ${currentPage === link.id ? 'site-nav-link-active' : ''}`}
+                            className={`site-nav-link text-xs lg:text-[13px] font-bold uppercase transition-colors ${currentPage === link.id ? 'site-nav-link-active' : ''}`}
                         >
                             {link.label}
                         </button>
@@ -109,7 +109,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
 
                     <button
                         onClick={() => setCurrentPage('contact')}
-                        className="bg-brand-600 text-white px-5 py-2.5 rounded-md text-[11px] font-black uppercase hover:bg-brand-700 transition-colors shadow-xl"
+                        className="bg-brand-600 text-white px-5 py-2.5 rounded-md text-xs font-black uppercase hover:bg-brand-700 transition-colors shadow-xl"
                     >
                         Request Quote
                     </button>
@@ -134,7 +134,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
                             </button>
                         ))}
                         <div className="pt-4 border-t border-white/10 space-y-2">
-                            <p className="text-[10px] font-black uppercase text-brand-500 tracking-wide">Services</p>
+                            <p className="text-xs font-black uppercase text-brand-500 tracking-wider">Services</p>
                             {serviceLinks.map((item) => (
                                 <button key={item.id} onClick={() => { setCurrentPage(item.id); setMobileMenuOpen(false); }} className="site-dropdown-item text-base font-medium text-left flex items-center gap-3 py-2 pl-2">
                                     <item.icon className="w-5 h-5 text-brand-500" /> {item.label}

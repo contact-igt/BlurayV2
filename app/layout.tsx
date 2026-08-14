@@ -15,11 +15,11 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" data-theme="dark" suppressHydrationWarning>
+        <html lang="en" data-theme="light" suppressHydrationWarning>
             <head>
                 <script
                     dangerouslySetInnerHTML={{
-                        __html: `(function(){try{var theme=localStorage.getItem('blueray-theme');document.documentElement.dataset.theme=theme==='light'?'light':'dark';}catch(e){document.documentElement.dataset.theme='dark';}})();`,
+                        __html: `(function(){try{document.documentElement.dataset.theme='light';localStorage.setItem('blueray-theme','light');}catch(e){document.documentElement.dataset.theme='light';}})();`,
                     }}
                 />
             </head>
