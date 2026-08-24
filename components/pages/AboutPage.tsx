@@ -262,7 +262,8 @@ const AboutPage: React.FC<AboutPageProps> = ({ setCurrentPage }) => {
                     <div className="p-7 sm:p-9 bg-white border-l-4 border-brand-500 rounded-2xl border-y border-r border-brand-500/15 shadow-sm space-y-4">
                         <h4 className="text-base font-bold text-slate-900 uppercase tracking-widest">Technical Desk Contact</h4>
                         <div className="space-y-2 text-sm sm:text-base text-slate-700 font-normal">
-                            <p><strong className="text-slate-900 font-semibold">UAE Phone:</strong> {COMPANY_CONFIG.phones.uae.display}</p>
+                            <p><strong className="text-slate-900 font-semibold">UAE Mobile:</strong> {COMPANY_CONFIG.phones.uae.display}</p>
+                            <p><strong className="text-slate-900 font-semibold">UAE Landline:</strong> {COMPANY_CONFIG.phones.landline.display}</p>
                             <p><strong className="text-slate-900 font-semibold">India Phone:</strong> {COMPANY_CONFIG.phones.india.display}</p>
                             <p><strong className="text-slate-900 font-semibold">Email:</strong> {COMPANY_CONFIG.emails.admin}</p>
                             <p><strong className="text-slate-900 font-semibold">Website:</strong> {COMPANY_CONFIG.website.display}</p>

@@ -31,8 +31,11 @@ const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
                     <div>
                         <h5 className="footer-heading text-brand-600 font-black text-xs sm:text-sm uppercase mb-5 tracking-wider">Contact & Support</h5>
                         <div className="space-y-3 text-xs sm:text-[13px] text-slate-600 font-medium">
-                            <p><span className="text-slate-500 font-bold uppercase block text-xs tracking-wider">UAE Phone:</span>
+                            <p><span className="text-slate-500 font-bold uppercase block text-xs tracking-wider">UAE Mobile:</span>
                                 <a href={COMPANY_CONFIG.phones.uae.href} className="hover:text-brand-600 transition-colors font-semibold text-slate-800">{COMPANY_CONFIG.phones.uae.display}</a>
+                            </p>
+                            <p><span className="text-slate-500 font-bold uppercase block text-xs tracking-wider">UAE Landline:</span>
+                                <a href={COMPANY_CONFIG.phones.landline.href} className="hover:text-brand-600 transition-colors font-semibold text-slate-800">{COMPANY_CONFIG.phones.landline.display}</a>
                             </p>
                             <p><span className="text-slate-500 font-bold uppercase block text-xs tracking-wider">India Phone:</span>
                                 <a href={COMPANY_CONFIG.phones.india.href} className="hover:text-brand-600 transition-colors font-semibold text-slate-800">{COMPANY_CONFIG.phones.india.display}</a>

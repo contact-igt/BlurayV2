@@ -149,9 +149,21 @@ const ContactPage: React.FC = () => {
                                     <Phone className="text-brand-500 w-6 h-6" />
                                 </div>
                                 <div>
-                                    <p className="text-sm font-bold uppercase text-slate-700 tracking-wider">UAE Direct Phone</p>
+                                    <p className="text-sm font-bold uppercase text-slate-700 tracking-wider">UAE Mobile Phone</p>
                                     <a href={COMPANY_CONFIG.phones.uae.href} className="text-base sm:text-lg font-bold text-slate-900 hover:text-brand-500 transition-colors">
                                         {COMPANY_CONFIG.phones.uae.display}
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div className="flex items-center gap-4 pt-4 border-t border-brand-500/10">
+                                <div className="w-12 h-12 bg-brand-500/10 rounded-2xl border border-brand-500/20 flex items-center justify-center shrink-0">
+                                    <Phone className="text-brand-500 w-6 h-6" />
+                                </div>
+                                <div>
+                                    <p className="text-sm font-bold uppercase text-slate-700 tracking-wider">UAE Landline</p>
+                                    <a href={COMPANY_CONFIG.phones.landline.href} className="text-base sm:text-lg font-bold text-slate-900 hover:text-brand-500 transition-colors">
+                                        {COMPANY_CONFIG.phones.landline.display}
                                     </a>
                                 </div>
                             </div>

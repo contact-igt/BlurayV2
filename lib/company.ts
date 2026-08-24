@@ -10,6 +10,10 @@ export const COMPANY_CONFIG = {
             display: "+971 505057863",
             href: "tel:+971505057863"
         },
+        landline: {
+            display: "+971 2 442 9794",
+            href: "tel:+97124429794"
+        },
         india: {
             display: "+91 8939886655",
             href: "tel:+918939886655"
