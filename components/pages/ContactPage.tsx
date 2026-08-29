@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PageWrapper from '@/components/layout/PageWrapper';
 import { COMPANY_CONFIG } from '@/lib/company';
-import { Mail, Phone, MapPin, Globe, Send, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { Mail, Phone, MapPin, Globe, Send, ShieldCheck, ExternalLink } from 'lucide-react';
 
 interface FormState {
     fullName: string;
@@ -109,7 +109,7 @@ const ContactPage: React.FC = () => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-24">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-16 sm:mb-20">
                 {/* Direct Contact Information Cards */}
                 <div className="lg:col-span-5 space-y-5">
                     <div className="p-7 sm:p-8 bg-white border border-brand-500/15 rounded-3xl shadow-sm space-y-6">
@@ -324,6 +324,42 @@ const ContactPage: React.FC = () => {
                     </form>
                 </div>
             </div>
+
+            <section className="overflow-hidden bg-white border border-brand-500/15 rounded-3xl shadow-sm" aria-labelledby="office-location-heading">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 p-7 sm:p-10 border-t-4 border-brand-500 border-b border-brand-500/15">
+                    <div className="lg:col-span-4">
+                        <p className="text-sm font-black text-brand-500 uppercase tracking-wider mb-3">Office location</p>
+                        <h2 id="office-location-heading" className="text-2xl sm:text-3xl font-black text-slate-900 leading-tight">
+                            Find our Abu Dhabi headquarters.
+                        </h2>
+                    </div>
+                    <div className="lg:col-span-8 lg:pl-10 lg:border-l border-brand-500/15 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
+                        <p className="text-sm sm:text-base text-slate-700 font-medium leading-relaxed max-w-xl">
+                            {COMPANY_CONFIG.uaeAddress.fullFormatted}
+                        </p>
+                        <a
+                            href={COMPANY_CONFIG.uaeAddress.mapHref}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center gap-2 shrink-0 min-h-12 px-6 py-3.5 bg-brand-600 text-white text-sm font-black uppercase rounded-xl shadow-lg shadow-brand-600/20 hover:bg-brand-700 active:translate-y-px transition-[background-color,transform] duration-150"
+                        >
+                            Open in Google Maps
+                            <ExternalLink className="w-5 h-5" aria-hidden="true" />
+                        </a>
+                    </div>
+                </div>
+
+                <div className="relative aspect-[4/3] sm:aspect-[16/7] min-h-72 bg-slate-100">
+                    <iframe
+                        src={COMPANY_CONFIG.uaeAddress.mapEmbedUrl}
+                        title="Map showing BLUERAY headquarters in Mussaffah, Abu Dhabi"
+                        className="absolute inset-0 w-full h-full border-0"
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        allowFullScreen
+                    />
+                </div>
+            </section>
         </PageWrapper>
     );
 };
