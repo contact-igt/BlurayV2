@@ -34,6 +34,8 @@ export const COMPANY_CONFIG = {
         street: "Ash Shallal 8th Street",
         zone: "Mussaffah - 42",
         cityCountry: "Abu Dhabi, UAE",
+        mapHref: "https://www.google.com/maps/place/24%C2%B020'26.5%22N+54%C2%B028'26.3%22E/@24.3406792,54.4713898,17z/data=!3m1!4b1!4m4!3m3!8m2!3d24.3406792!4d54.4739647?hl=en&entry=ttu",
+        mapEmbedUrl: "https://www.google.com/maps?q=24.3406792,54.4739647&z=17&output=embed",
         fullFormatted: [
             "Mussaffah - Sector 43",
             "Plot No: 117 - Building A",
