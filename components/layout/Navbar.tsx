@@ -7,7 +7,10 @@ import {
     Anchor,
     Menu,
     X,
-    ChevronDown
+    ChevronDown,
+    Mail,
+    MapPin,
+    Phone
 } from 'lucide-react';
 
 import { COMPANY_CONFIG } from '@/lib/company';
@@ -43,10 +46,33 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
 
     return (
         <nav className={`site-navbar fixed w-full z-[100] transition-all duration-300 ${isScrolled
-            ? 'py-2 bg-white/95 border-b border-brand-500/15 shadow-md backdrop-blur-md'
-            : 'py-2.5 sm:py-3 bg-white/90 border-b border-brand-500/10 backdrop-blur-sm'
+            ? 'bg-white/95 border-b border-brand-500/15 shadow-md backdrop-blur-md'
+            : 'bg-white/90 border-b border-brand-500/10 backdrop-blur-sm'
             }`}>
-            <div className="max-w-7xl mx-auto px-5 sm:px-6 flex justify-between items-center">
+            <div className="site-contact-bar bg-brand-700 text-white">
+                <div className="max-w-7xl mx-auto h-8 px-5 sm:px-6 flex items-center justify-between gap-4 text-[11px] font-semibold">
+                    <div className="flex items-center gap-4 sm:gap-6 min-w-0">
+                        <a href={COMPANY_CONFIG.phones.uae.href} className="flex items-center gap-1.5 shrink-0 hover:text-blue-100 transition-colors" aria-label={`Call BLUERAY at ${COMPANY_CONFIG.phones.uae.display}`}>
+                            <Phone className="w-3.5 h-3.5" aria-hidden="true" />
+                            <span>{COMPANY_CONFIG.phones.uae.display}</span>
+                        </a>
+                        <a href={COMPANY_CONFIG.phones.landline.href} className="hidden sm:flex items-center gap-1.5 shrink-0 hover:text-blue-100 transition-colors" aria-label={`Call BLUERAY landline at ${COMPANY_CONFIG.phones.landline.display}`}>
+                            <Phone className="w-3.5 h-3.5" aria-hidden="true" />
+                            <span>{COMPANY_CONFIG.phones.landline.display}</span>
+                        </a>
+                        <a href={`mailto:${COMPANY_CONFIG.emails.admin}`} className="flex items-center gap-1.5 min-w-0 hover:text-blue-100 transition-colors">
+                            <Mail className="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
+                            <span className="truncate">{COMPANY_CONFIG.emails.admin}</span>
+                        </a>
+                    </div>
+                    <span className="hidden md:flex items-center gap-1.5 shrink-0">
+                        <MapPin className="w-3.5 h-3.5" aria-hidden="true" />
+                        {COMPANY_CONFIG.headquarters}
+                    </span>
+                </div>
+            </div>
+
+            <div className={`max-w-7xl mx-auto px-5 sm:px-6 flex justify-between items-center transition-[padding] duration-150 ${isScrolled ? 'py-2' : 'py-2.5 sm:py-3'}`}>
                 <button aria-label="BLUERAY home" className="flex items-center cursor-pointer group" onClick={() => setCurrentPage('home')}>
                     <img src="/images/blueray-logo-final-approved-display.png" alt={COMPANY_CONFIG.legalName} className="brand-logo h-14 sm:h-16 lg:h-[4.5rem] w-auto object-contain transition-transform duration-150 group-hover:scale-[1.02]" />
                 </button>
@@ -126,7 +152,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
                         initial={{ opacity: 0, x: 50 }}
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: 50 }}
-                        className="site-mobile-menu absolute top-full left-0 right-0 h-[calc(100vh-4.75rem)] sm:h-[calc(100vh-5.5rem)] bg-slate-950 z-[200] p-6 flex flex-col space-y-4 lg:hidden border-t border-brand-500/30 shadow-2xl overflow-y-auto"
+                        className="site-mobile-menu absolute top-full left-0 right-0 h-[calc(100dvh-6.75rem)] sm:h-[calc(100dvh-7.5rem)] bg-slate-950 z-[200] p-6 flex flex-col space-y-4 lg:hidden border-t border-brand-500/30 shadow-2xl overflow-y-auto"
                     >
                         {mainLinks.slice(0, 2).map((item) => (
                             <button key={item.id} onClick={() => { setCurrentPage(item.id); setMobileMenuOpen(false); }} className={`site-nav-link text-lg font-bold text-left py-2 ${currentPage === item.id ? 'site-nav-link-active' : ''}`}>

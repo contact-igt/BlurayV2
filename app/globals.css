@@ -91,7 +91,6 @@ body {
 }
 
 .site-navbar,
-.site-navbar > div:first-child,
 .site-services-dropdown,
 .site-mobile-menu {
   background-color: #ffffff !important;
